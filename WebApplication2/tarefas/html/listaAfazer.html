@@ -1,0 +1,23 @@
+﻿<div class="jumbotron">
+    <h4>Lista de Tarefas (À fazer)</h4>
+</div>
+<div ng-app="tarefas" ng-controller="listaController">
+    <table class="table">
+        <tr>
+            <th>Descrição</th>
+            <th>Categoria</th>
+            <th>Prioridade</th>
+            <th>Status</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="tarefa in tarefas | filter: {Status: 'À fazer'}">
+            <td>{{tarefa.Descricao}}</td>
+            <td>{{tarefa.Categoria}}</td>
+            <td>{{tarefa.Prioridade}}</td>
+            <td>{{tarefa.Status}}</td>
+            <td><button class="btn-info btn-group-xs" ng-click="feito(tarefa)">FEITO</button></td>
+            <td><button class="btn-primary btn-group-xs" ng-click="deletar(tarefa)">DELETAR</button></td>
+        </tr>
+    </table>
+</div>

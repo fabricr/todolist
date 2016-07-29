@@ -1,0 +1,60 @@
+﻿<div class="jumbotron">
+    <h4>Adicionar Tarefa</h4>
+</div>
+<div ng-controller="adicionaController">
+    <form>
+        <fieldset>
+            <div class="form-group">
+                <label for="descricao" class="control-label col-md-3">
+                    Descrição:
+                </label>
+                <div class="col-md-9">
+                    <input id="descricao" type="text" ng-model="inserir.tarefa.Descricao" required class="form-control" />
+                </div>
+            </div>
+            </br>
+            </br>
+            <div class="form-group">
+                <label for="status" class="control-label col-md-3">
+                    Status:
+                </label>
+                <div class="col-md-9">
+                    <select id="status" name="status" ng-model="inserir.tarefa.Status" required class="form-control">
+                        <option value="">Selecione</option>
+                        <option value="À Fazer">À Fazer</option>
+                        <option value="Feito">Feito</option>
+                    </select>
+                </div>
+            </div>
+            </br>
+            </br>
+            <div class="form-group">
+                <label for="categoria" class="control-label col-md-3">
+                    Categoria:
+                </label>
+                <div class="col-md-9">
+                    <input id="categoria" type="text" ng-model="inserir.tarefa.Categoria" required class="form-control" />
+                </div>
+            </div>
+            </br>
+            </br>
+            <div class="form-group">
+                <label for="prioridade" class="control-label col-md-3">
+                    Prioridade:
+                </label>
+                <div class="col-md-9">
+                    <select id="prioridade" name="prioridade" ng-model="inserir.tarefa.Prioridade" required class="form-control">
+                        <option value="">Selecione</option>
+                        <option value="Mínima">Mínima</option>
+                        <option value="Média">Média</option>
+                        <option value="Máxima">Máxima</option>
+                    </select>
+                </div>
+            </div>
+            </br>
+            </br>
+            <button class="btn-primary btn-group-xs" ng-click="salvar()">SALVAR</button>
+            <button class="btn-info btn-group-xs" ng-click="cancelar()">CANCELAR</button>
+        </fieldset>
+    </form>
+</div>;

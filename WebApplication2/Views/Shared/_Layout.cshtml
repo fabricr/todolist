@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="tarefas" ng-controller="listaController" class="no-js" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <ul class="navbar-brand">
+                    <a href="#/">TODO</a>
+                </ul>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/">Listar Todos</a></li>
+                    <li><a href="#/listaAfazer">Listar À fazer</a></li>
+                    <li><a href="#/listaFeitos">Listar Feitos</a></li>
+                    <li><a href="#/adicionar">Adicionar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div ng-app="tarefas" ng-controller="listaController">
+
+        </div>
+        @RenderBody()
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
